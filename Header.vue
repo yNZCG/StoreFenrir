@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
-import { useTheme } from "../composables/useTheme.js";
-import { useCart } from "../composables/useCart.js";
+import { useTheme } from "./useTheme.js";
+import { useCart } from "./useCart.js";
 
 const search = defineModel("search", { type: String, default: "" });
 const emit = defineEmits(["open-cart", "ir-produtos"]);
