@@ -1,4 +1,4 @@
-import { produtos } from "../data/produtos.js";
+import { produtos } from "./produtos.js";
 import { formatarPreco } from "./useCart.js";
 
 export const WHATSAPP = "5561998120366";
