@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { useCart, formatarPreco } from "../composables/useCart.js";
+import { useCart, formatarPreco } from "./useCart.js";
 
 const props = defineProps({
     produto: {
