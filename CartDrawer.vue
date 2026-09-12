@@ -1,8 +1,7 @@
 <script setup>
 import { ref } from "vue";
-import { useCart, formatarPreco } from "../composables/useCart.js";
-import { useWhatsApp } from "../composables/useWhatsApp.js";
-
+import { useCart, formatarPreco } from "./useCart.js";
+import { useWhatsApp } from "./useWhatsApp.js";
 defineProps({
     aberto: {
         type: Boolean,
