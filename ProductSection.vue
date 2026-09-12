@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref } from "vue";
-import { produtos } from "../data/produtos.js";
+import { produtos } from "./produtos.js";
 import ProductCard from "./ProductCard.vue";
 
 const props = defineProps({
