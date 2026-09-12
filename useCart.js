@@ -1,5 +1,5 @@
 import { computed, ref } from "vue";
-import { produtos } from "../data/produtos.js";
+import { produtos } from "./produtos.js";
 
 const carrinho = ref(JSON.parse(localStorage.getItem("fenrirCarrinho")) || []);
 const toastTexto = ref("Produto adicionado ao carrinho!");
