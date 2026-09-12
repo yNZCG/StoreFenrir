@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import { useCart, formatarPreco } from "./useCart.js";
+import { useWhatsApp } from "./useWhatsApp.js";
 
 const props = defineProps({
     produto: {
