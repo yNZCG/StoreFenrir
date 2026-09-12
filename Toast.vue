@@ -1,5 +1,5 @@
 <script setup>
-import { useCart } from "../composables/useCart.js";
+import { useCart } from "./useCart.js";
 
 const { toastTexto, toastVisivel } = useCart();
 </script>
