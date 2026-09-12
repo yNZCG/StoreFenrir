@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import { WHATSAPP } from "../composables/useWhatsApp.js";
+import { WHATSAPP } from "./useWhatsApp.js";
 
 const mostrarTopo = ref(false);
 
