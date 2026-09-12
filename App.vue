@@ -1,21 +1,19 @@
-<script setup>
-import { onMounted, onUnmounted, ref, watch } from "vue";
-import { produtos } from "./data/produtos.js";
-import { useTheme } from "./composables/useTheme.js";
-import Header from "./components/Header.vue";
-import Hero from "./components/Hero.vue";
-import Brands from "./components/Brands.vue";
-import ProductSection from "./components/ProductSection.vue";
-import Benefits from "./components/Benefits.vue";
-import Promo from "./components/Promo.vue";
-import Faq from "./components/Faq.vue";
-import FinalCta from "./components/FinalCta.vue";
-import Footer from "./components/Footer.vue";
-import ProductModal from "./components/ProductModal.vue";
-import CartDrawer from "./components/CartDrawer.vue";
-import FloatingButtons from "./components/FloatingButtons.vue";
-import Toast from "./components/Toast.vue";
+import { produtos } from "./produtos.js";
+import { useTheme } from "./useTheme.js";
 
+import Header from "./Header.vue";
+import Hero from "./Hero.vue";
+import Brands from "./Brands.vue";
+import ProductSection from "./ProductSection.vue";
+import Benefits from "./Benefits.vue";
+import Promo from "./Promo.vue";
+import Faq from "./Faq.vue";
+import FinalCta from "./FinalCta.vue";
+import Footer from "./Footer.vue";
+import ProductModal from "./ProductModal.vue";
+import CartDrawer from "./CartDrawer.vue";
+import FloatingButtons from "./FloatingButtons.vue";
+import Toast from "./Toast.vue";
 const { inicializarTema } = useTheme();
 
 const searchTerm = ref("");
