@@ -43,7 +43,7 @@ export const produtos = [
         marca: "Motorola",
         categoria: "motorola",
         preco: 2599,
-        imagem: "https://fujiokadistribuidor.vteximg.com.br/arquivos/ids/422746",
+        imagem: "https://images.kabum.com.br/produtos/fotos/614848/smartphone-motorola-edge-50-fusion-5g-256gb-8gb-ram-boost-50mp-sony-ai-camera-ip68-nfc-blue-teal_1724936462_gg.jpg",
         descricao: "Design sofisticado com acabamento em couro vegano, tela pOLED curva de alta qualidade e carregamento ultra rápido.",
         especificacoes: {
             "Armazenamento": "256 GB",
