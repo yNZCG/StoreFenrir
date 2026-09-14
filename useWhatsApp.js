@@ -5,7 +5,7 @@ export const WHATSAPP = "5561998120366";
 
 export function useWhatsApp() {
     function abrirWhatsApp() {
-        const mensagem = "Olá! Vim pelo site da Fenrir Store e gostaria de conhecer os celulares disponíveis.";
+        const mensagem = "Olá! Vim pelo site da Ever on Cell e gostaria de conhecer os celulares disponíveis.";
         window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(mensagem), "_blank");
     }
 
@@ -29,7 +29,7 @@ Gostaria de saber como posso finalizar a compra.`;
             return;
         }
 
-        let mensagem = "Olá! Gostaria de fazer um pedido na Fenrir Store:%0A%0A";
+        let mensagem = "Olá! Gostaria de fazer um pedido na Ever On Cell:%0A%0A";
         let total = 0;
 
         carrinho.forEach((item) => {

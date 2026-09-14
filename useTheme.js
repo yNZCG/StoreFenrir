@@ -12,13 +12,13 @@ function aplicarTema() {
 
 export function useTheme() {
     function inicializarTema() {
-        isLight.value = localStorage.getItem("fenrirTema") === "light";
+        isLight.value = localStorage.getItem("EveronCellTema") === "light";
         aplicarTema();
     }
 
     function alternarTema() {
         isLight.value = !isLight.value;
-        localStorage.setItem("fenrirTema", isLight.value ? "light" : "dark");
+        localStorage.setItem("EveronCellTema", isLight.value ? "light" : "dark");
         aplicarTema();
     }
 

@@ -3,7 +3,7 @@
         <div class="section-container">
             <div class="section-header">
                 <div class="section-title">
-                    <small>POR QUE ESCOLHER A FENRIR</small>
+                    <small>POR QUE ESCOLHER A EVER ON CELL</small>
                     <h2>Uma compra sem complicação.</h2>
                     <p>Tudo pensado para você comprar com confiança.</p>
                 </div>

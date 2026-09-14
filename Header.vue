@@ -55,13 +55,13 @@ function fecharMenu() {
     <header class="header" :class="{ 'header--escondido': escondido }">
         <div class="header-container">
             <a href="#inicio" class="logo" @click="fecharMenu">
-                <span class="logo-wolf">🐺</span> Fenrir <span>Store</span>
+                <span class="logo-wolf">🐺</span>Ever on Cell  <span>Store</span>
             </a>
 
             <nav class="nav" :class="{ open: menuAberto }">
                 <a href="#inicio" @click="fecharMenu">Início</a>
                 <a href="#produtos" @click="fecharMenu">Celulares</a>
-                <a href="#beneficios" @click="fecharMenu">Por que Fenrir?</a>
+                <a href="#beneficios" @click="fecharMenu">Por que Ever on Cell?</a>
                 <a href="#faq" @click="fecharMenu">Dúvidas</a>
             </nav>
 

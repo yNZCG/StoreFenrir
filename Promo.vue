@@ -8,7 +8,7 @@ const { abrirWhatsApp } = useWhatsApp();
     <section class="promo">
         <div class="promo-container">
             <div class="promo-content">
-                <small>FENRIR STORE</small>
+                <small>EVER ON CELL</small>
                 <h2>Seu próximo upgrade começa aqui.</h2>
                 <p>Não sabe qual celular escolher? Converse com nossa equipe e tenha um atendimento personalizado.</p>
                 <button class="primary-button" @click="abrirWhatsApp">

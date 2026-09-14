@@ -1,7 +1,7 @@
 import { computed, ref } from "vue";
 import { produtos } from "./produtos.js";
 
-const carrinho = ref(JSON.parse(localStorage.getItem("fenrirCarrinho")) || []);
+const carrinho = ref(JSON.parse(localStorage.getItem("EverOnCellCarrinho")) || []);
 const toastTexto = ref("Produto adicionado ao carrinho!");
 const toastVisivel = ref(false);
 let toastTimer = null;
@@ -36,7 +36,7 @@ export function useCart() {
     );
 
     function salvarCarrinho() {
-        localStorage.setItem("fenrirCarrinho", JSON.stringify(carrinho.value));
+        localStorage.setItem("EverOnCellCarrinho", JSON.stringify(carrinho.value));
     }
 
     function mostrarToast(texto) {

@@ -9,7 +9,7 @@ const { abrirWhatsApp } = useWhatsApp();
         <div class="footer-grid">
             <div>
                 <div class="footer-logo">
-                    <span>🐺</span> Fenrir <span>Store</span>
+                    <span>🐺</span> Ever On Cell <span>Store</span>
                 </div>
                 <p class="footer-description">
                     Smartphones, tecnologia e atendimento especializado para você fazer a escolha certa.
@@ -19,7 +19,7 @@ const { abrirWhatsApp } = useWhatsApp();
             <div>
                 <h4>Loja</h4>
                 <a href="#produtos">Celulares</a>
-                <a href="#beneficios">Por que Fenrir?</a>
+                <a href="#beneficios">Por que Ever On Cell?</a>
                 <a href="#faq">Dúvidas</a>
             </div>
 
@@ -39,7 +39,7 @@ const { abrirWhatsApp } = useWhatsApp();
         </div>
 
         <div class="footer-bottom">
-            © 2026 Fenrir Store — Todos os direitos reservados.
+            © 2026 Ever On Cell Store — Todos os direitos reservados.
         </div>
     </footer>
 </template>

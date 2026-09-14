@@ -9,7 +9,7 @@ const { abrirWhatsApp } = useWhatsApp();
         <h2>Vamos encontrar seu próximo celular?</h2>
         <p>Nossa equipe está pronta para ajudar você.</p>
         <button class="final-button" @click="abrirWhatsApp">
-            Falar com a Fenrir
+            Falar com a ever on cell
         </button>
     </section>
 </template>
