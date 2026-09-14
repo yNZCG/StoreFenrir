@@ -1,3 +1,5 @@
+<script setup>
+import { ref, onMounted, onUnmounted, watch } from "vue";
 import { produtos } from "./produtos.js";
 import { useTheme } from "./useTheme.js";
 
