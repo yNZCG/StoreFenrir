@@ -1,5 +1,5 @@
 <script setup>
-import { useWhatsApp } from "../composables/useWhatsApp.js";
+import { useWhatsApp } from "./useWhatsApp.js";
 
 const { abrirWhatsApp } = useWhatsApp();
 </script>
