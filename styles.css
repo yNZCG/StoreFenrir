@@ -440,12 +440,29 @@ body.light-theme {
     border-radius:0 0 15px 15px;
 }
 
-.phone-wolf-logo {
-    font-size:80px;
+.phone-brand {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     user-select:none;
     filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
+    text-align:center;
 }
 
+.phone-brand-line1 {
+    font-size:16px;
+    font-weight:600;
+    letter-spacing:4px;
+    color:#e4e4e7;
+}
+
+.phone-brand-line2 {
+    font-size:32px;
+    font-weight:900;
+    letter-spacing:2px;
+    color:#ffffff;
+    margin-top:-2px;
+}
 @keyframes phoneFloat{
     0%,100%{
         transform:translateY(0) rotate(-7deg);
