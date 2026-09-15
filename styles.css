@@ -120,8 +120,10 @@ body.light-theme {
     color:var(--purple);
 }
 
-.logo-wolf{
-    font-size:26px;
+.logo-badge{
+    width:30px;
+    height:38px;
+    flex-shrink:0;
 }
 
 .nav{
@@ -231,8 +233,8 @@ body.light-theme {
     position:relative;
     height:42px;
     padding:0 18px;
-    border:1px solid #ea580c;
-    background:#f97316;
+    border:1px solid #9c6142;
+    background:#b8764f;
     border-radius:7px;
     display:flex;
     align-items:center;
@@ -243,8 +245,8 @@ body.light-theme {
 }
 
 .cart-button:hover{
-    background:#ea580c;
-    border-color:#c2410c;
+    background:#9c6142;
+    border-color:#7f4f37;
     transform:translateY(-1px);
 }
 
@@ -411,12 +413,12 @@ body.light-theme {
     box-shadow: 
         inset 0 0 0 10px #25252a, /* Simula a borda perfeitamente sem fendas */
         0 40px 100px rgba(0,0,0,.4),
-        0 0 80px rgba(124,58,237,.3);
+        0 0 80px rgba(113,113,122,.3);
     background: radial-gradient(
         circle at 35% 25%,
-        #ddd6fe,
-        #7c3aed 35%,
-        #120a20 75%
+        #e4e4e7,
+        #71717a 35%,
+        #141414 75%
     );
     transform: rotate(-7deg);
     animation: phoneFloat 5s ease-in-out infinite;
@@ -662,7 +664,7 @@ body.light-theme {
     width:44px;
     height:44px;
     border-radius:10px;
-    background:#f97316;
+    background:#b8764f;
     color:white;
     border:0;
     font-size:18px;
@@ -670,11 +672,11 @@ body.light-theme {
     align-items:center;
     justify-content:center;
     transition:.3s;
-    box-shadow:0 4px 12px rgba(249, 115, 34, 0.3);
+    box-shadow:0 4px 12px rgba(184, 118, 79, 0.3);
 }
 
 .product-buy:hover{
-    background:#ea580c;
+    background:#9c6142;
     transform:scale(1.08);
 }
 
@@ -1100,7 +1102,7 @@ footer a:hover{
 .modal-cart{
     flex:1;
     border:0;
-    background:#f97316;
+    background:#b8764f;
     color:white;
     padding:16px;
     border-radius:7px;
@@ -1109,7 +1111,7 @@ footer a:hover{
 }
 
 .modal-cart:hover{
-    background:#ea580c;
+    background:#9c6142;
 }
 
 .modal-buy{
