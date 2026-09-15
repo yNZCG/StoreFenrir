@@ -55,7 +55,20 @@ function fecharMenu() {
     <header class="header" :class="{ 'header--escondido': escondido }">
         <div class="header-container">
             <a href="#inicio" class="logo" @click="fecharMenu">
-                <span class="logo-wolf">🐺</span>Ever on Cell  <span>Store</span>
+                <svg class="logo-badge" viewBox="0 0 32 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#a1a1aa" />
+                            <stop offset="50%" stop-color="#52525b" />
+                            <stop offset="100%" stop-color="#18181b" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="1" y="1" width="30" height="38" rx="8" fill="url(#logoGrad)" stroke="#a1a1aa" stroke-width="1" />
+                    <rect x="11" y="4.5" width="10" height="2.2" rx="1.1" fill="#27272a" />
+                    <text x="16" y="25" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="800" letter-spacing="0.5" fill="#f4f4f5">EOC</text>
+                    <rect x="12.5" y="34" width="7" height="1.4" rx="0.7" fill="#a1a1aa" opacity="0.6" />
+                </svg>
+                Ever on Cell  <span>Store</span>
             </a>
 
             <nav class="nav" :class="{ open: menuAberto }">
