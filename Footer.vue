@@ -9,7 +9,7 @@ const { abrirWhatsApp } = useWhatsApp();
         <div class="footer-grid">
             <div>
                 <div class="footer-logo">
-                    <span></span> Ever On Cell <span>Store</span>
+                    <span> Ever On Cell <span>Store</span>
                 </div>
                 <p class="footer-description">
                     Smartphones, tecnologia e atendimento especializado para você fazer a escolha certa.
