@@ -44,25 +44,25 @@ body.modal-open{
 
 :root {
     /* Tema Escuro (Padrão) */
-    --bg-main: linear-gradient(135deg, #070714 0%, #0d0d26 50%, #150a2a 100%);
-    --header-bg: rgba(13, 13, 26, 0.85);
+    --bg-main: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #111111 100%);
+    --header-bg: rgba(20, 20, 20, 0.85);
     --card-bg: rgba(255, 255, 255, 0.03);
     --card-border: rgba(255, 255, 255, 0.12);
     --text-main: #e4e4e7;
     --text-muted: #a1a1aa;
     --text-title: #ffffff;
-    --modal-bg: #0d0d1e;
+    --modal-bg: #141414;
     --input-bg: rgba(255, 255, 255, 0.08);
 
-    --purple: #7c3aed;
-    --purple-dark: #5b21b6;
-    --purple-light: #a78bfa;
+    --purple: #71717a;
+    --purple-dark: #52525b;
+    --purple-light: #d4d4d8;
     --border: rgba(255, 255, 255, 0.12);
 }
 
 body.light-theme {
     /* Tema Claro */
-    --bg-main: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+    --bg-main: linear-gradient(135deg, #f4f4f5 0%, #e4e4e7 50%, #f4f4f5 100%);
     --header-bg: rgba(255, 255, 255, 0.85);
     --card-bg: rgba(255, 255, 255, 0.8);
     --card-border: rgba(0, 0, 0, 0.1);
