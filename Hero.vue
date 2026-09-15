@@ -34,7 +34,7 @@ const { abrirWhatsApp } = useWhatsApp();
                 </div>
             </div>
 
-            <div class="hero-product">
+<div class="hero-product">
     <div class="glow"></div>
     <div class="big-phone">
         <div class="phone-brand">
