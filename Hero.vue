@@ -34,12 +34,15 @@ const { abrirWhatsApp } = useWhatsApp();
                 </div>
             </div>
 
-<div class="hero-product">
-    <div class="glow"></div>
-    <div class="big-phone">
-        <div class="phone-brand">
-            <span class="phone-brand-line1">EVER ON</span>
-            <span class="phone-brand-line2">CELL</span>
+        <div class="hero-product">
+            <div class="glow"></div>
+            <div class="big-phone">
+                <div class="phone-brand">
+                    <span class="phone-brand-line1">EVER ON</span>
+                    <span class="phone-brand-line2">CELL</span>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+</template>
