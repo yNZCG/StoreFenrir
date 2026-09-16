@@ -389,86 +389,190 @@ body.light-theme {
 
 .hero-product{
     position:relative;
-    height:500px;
+    height:600px;
     display:flex;
     justify-content:center;
     align-items:center;
 }
 
-.glow{
+.beam{
     position:absolute;
-    width:380px;
-    height:380px;
-    background:var(--purple);
-    filter:blur(100px);
-    opacity:.35;
+    top:-140px;
+    left:50%;
+    width:0;
+    height:0;
+    border-left:190px solid transparent;
+    border-right:190px solid transparent;
+    border-top:580px solid rgba(255,255,255,.06);
+    transform:translateX(-50%);
+    filter:blur(26px);
+    mix-blend-mode:screen;
+    pointer-events:none;
 }
 
-.big-phone {
-    position: relative;
-    width: 250px;
-    height: 480px;
-    border-radius: 42px;
-    border: none; /* Remove a borda tradicional */
-    box-shadow: 
-        inset 0 0 0 10px #25252a, /* Simula a borda perfeitamente sem fendas */
-        0 40px 100px rgba(0,0,0,.4),
-        0 0 80px rgba(113,113,122,.3);
-    background: radial-gradient(
-        circle at 35% 25%,
-        #e4e4e7,
-        #71717a 35%,
-        #141414 75%
-    );
-    transform: rotate(-7deg);
-    animation: phoneFloat 5s ease-in-out infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.big-phone::before{
-    content:"";
+.hotspot{
     position:absolute;
-    top:0;
+    top:6%;
     left:50%;
     transform:translateX(-50%);
-    width:80px;
-    height:23px;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,255,255,.20), transparent 68%);
+    filter:blur(8px);
+    pointer-events:none;
+}
+
+.floor-glow{
+    position:absolute;
+    bottom:54px;
+    left:50%;
+    transform:translateX(-50%);
+    width:380px;
+    height:120px;
+    border-radius:50%;
+    background:radial-gradient(ellipse at center, rgba(212,212,216,.30), rgba(113,113,122,.10) 45%, transparent 72%);
+    filter:blur(3px);
+}
+
+.ring{
+    position:absolute;
+    bottom:70px;
+    left:50%;
+    width:320px;
+    height:320px;
+    transform:translateX(-50%) rotateX(78deg);
+    border-radius:50%;
+    border:1px solid rgba(212,212,216,.22);
+    box-shadow:0 0 40px rgba(212,212,216,.06) inset;
+}
+
+.ring.spin{
+    animation:spin 30s linear infinite;
+}
+
+.ring::before{
+    content:"";
+    position:absolute;
+    inset:34px;
+    border-radius:50%;
+    border:1px solid rgba(212,212,216,.10);
+}
+
+@keyframes spin{
+    to{ transform:translateX(-50%) rotateX(78deg) rotateZ(360deg); }
+}
+
+.phone-float{
+    position:relative;
+    z-index:3;
+    animation:phoneFloat 6s ease-in-out infinite;
+}
+
+.phone-wrap{
+    position:relative;
+    perspective:1300px;
+}
+
+.phone{
+    width:253px;
+    height:525px;
+    position:relative;
+    transform-style:preserve-3d;
+    transform:rotateY(-18deg) rotateX(4deg);
+    transition:transform .45s cubic-bezier(.22,.9,.3,1);
+}
+
+.phone-edge{
+    position:absolute;
+    inset:0;
+    border-radius:44px;
+    background:linear-gradient(165deg,#c7c7cd 0%,#8b8b94 14%,#4c4c52 34%,#232326 58%,#0c0c0d 82%,#000 100%);
+    transform:translateZ(-9px) translateX(7px);
+}
+
+.phone-edge::before,
+.phone-edge::after{
+    content:"";
+    position:absolute;
+    left:6%;
+    right:6%;
+    height:2px;
+    background:rgba(0,0,0,.55);
+}
+
+.phone-edge::before{ top:16%; }
+.phone-edge::after{ bottom:19%; }
+
+.phone-edge .btn-vol{
+    position:absolute;
+    right:-2px;
+    top:110px;
+    width:3px;
+    height:34px;
     background:#050505;
-    border-radius:0 0 15px 15px;
+    border-radius:2px;
+    box-shadow:-1px 0 0 rgba(255,255,255,.15);
 }
 
-.phone-brand {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    user-select:none;
-    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.4));
-    text-align:center;
+.phone-edge .btn-vol.two{ top:154px; height:34px; }
+
+.phone-edge .btn-power{
+    position:absolute;
+    right:-2px;
+    top:210px;
+    width:3px;
+    height:56px;
+    background:#050505;
+    border-radius:2px;
+    box-shadow:-1px 0 0 rgba(255,255,255,.15);
 }
 
-.phone-brand-line1 {
-    font-size:16px;
-    font-weight:600;
-    letter-spacing:4px;
-    color:#e4e4e7;
+.phone-front{
+    position:absolute;
+    inset:0;
+    border-radius:44px;
+    overflow:hidden;
+    transform:translateZ(3px);
+    box-shadow:
+        0 45px 90px rgba(0,0,0,.55),
+        0 0 90px rgba(113,113,122,.28);
 }
 
-.phone-brand-line2 {
-    font-size:32px;
-    font-weight:900;
-    letter-spacing:2px;
-    color:#ffffff;
-    margin-top:-2px;
+.phone-front svg{
+    display:block;
+    width:100%;
+    height:100%;
 }
+
+.reflection{
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:100%;
+    transform:scaleY(-1) rotateY(-18deg) rotateX(-4deg);
+    transform-origin:top center;
+    opacity:.20;
+    border-radius:44px;
+    overflow:hidden;
+    -webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,.5), transparent 55%);
+    mask-image:linear-gradient(to bottom, rgba(0,0,0,.5), transparent 55%);
+    pointer-events:none;
+}
+
+.reflection svg{
+    display:block;
+    width:100%;
+    height:100%;
+}
+
 @keyframes phoneFloat{
     0%,100%{
-        transform:translateY(0) rotate(-7deg);
+        transform:translateY(0);
     }
     50%{
-        transform:translateY(-18px) rotate(-4deg);
+        transform:translateY(-16px);
     }
 }
 
@@ -1420,6 +1524,9 @@ footer a:hover{
     .hero-info{
         justify-content:center;
     }
+    .hero-product{
+        height:460px;
+    }
     .benefit-grid{
         grid-template-columns:repeat(2,1fr);
     }
@@ -1479,11 +1586,11 @@ footer a:hover{
         align-items:center;
     }
     .hero-product{
-        height:390px;
+        height:380px;
     }
-    .big-phone{
+    .phone{
         width:190px;
-        height:365px;
+        height:395px;
     }
     .products{
         grid-template-columns:1fr;
@@ -1539,4 +1646,16 @@ footer a:hover{
 .toast.show{
     opacity:1;
     transform:translate(-50%,0);
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE — REDUZIR MOVIMENTO
+===================================================== */
+
+@media(prefers-reduced-motion: reduce){
+    .phone-float,
+    .ring.spin{
+        animation:none;
+    }
 }
