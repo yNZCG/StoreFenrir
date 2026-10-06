@@ -1,11 +1,54 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import { useWhatsApp } from "./useWhatsApp.js";
 
 const { abrirWhatsApp } = useWhatsApp();
 
 const stageRef = ref(null);
 const phoneRef = ref(null);
+
+// ---- Relógio e data reais, na tela do celular do hero ----
+const agora = ref(new Date());
+let relogioTimer = null;
+
+const horaFormatada = computed(() => {
+    const h = String(agora.value.getHours()).padStart(2, "0");
+    const m = String(agora.value.getMinutes()).padStart(2, "0");
+    return `${h}:${m}`;
+});
+
+const dataFormatada = computed(() => {
+    const texto = new Intl.DateTimeFormat("pt-BR", {
+        weekday: "long",
+        day: "numeric",
+        month: "long"
+    }).format(agora.value);
+    return texto.charAt(0).toUpperCase() + texto.slice(1);
+});
+
+// ---- Clima real (Brasília — mesmo DDD do WhatsApp da loja), via Open-Meteo ----
+const temperatura = ref(null);
+const condicao = ref("sol"); // "sol" | "nuvem" | "chuva"
+
+function mapearCondicao(codigo) {
+    if (codigo === 0 || codigo === 1) return "sol";
+    if (codigo >= 51) return "chuva";
+    return "nuvem";
+}
+
+async function buscarClima() {
+    try {
+        const resposta = await fetch(
+            "https://api.open-meteo.com/v1/forecast?latitude=-15.7801&longitude=-47.9292&current_weather=true"
+        );
+        const dados = await resposta.json();
+        if (!dados?.current_weather) return;
+        temperatura.value = Math.round(dados.current_weather.temperature);
+        condicao.value = mapearCondicao(dados.current_weather.weathercode);
+    } catch (erro) {
+        // Falha silenciosa — a tela mantém o placeholder "--°"
+    }
+}
 
 const baseRy = -18;
 const baseRx = 4;
@@ -38,9 +81,17 @@ onMounted(() => {
         stageRef.value.addEventListener("mouseleave", onMouseLeave);
         tiltAtivo = true;
     }
+
+    relogioTimer = setInterval(() => {
+        agora.value = new Date();
+    }, 1000);
+
+    buscarClima();
 });
 
 onUnmounted(() => {
+    clearInterval(relogioTimer);
+
     if (tiltAtivo && stageRef.value) {
         stageRef.value.removeEventListener("mousemove", onMouseMove);
         stageRef.value.removeEventListener("mouseleave", onMouseLeave);
@@ -136,7 +187,7 @@ onUnmounted(() => {
                                     <g clip-path="url(#screenClip)">
                                         <rect x="9" y="9" width="242" height="522" fill="url(#screenGrad)"/>
 
-                                        <text x="26" y="30" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff" fill-opacity="0.92">10:41</text>
+                                        <text x="26" y="30" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#ffffff" fill-opacity="0.92">{{ horaFormatada }}</text>
                                         <rect x="196" y="24" width="3" height="6" rx="1" fill="#fff" fill-opacity="0.85"/>
                                         <rect x="201" y="21" width="3" height="9" rx="1" fill="#fff" fill-opacity="0.85"/>
                                         <rect x="206" y="18" width="3" height="12" rx="1" fill="#fff" fill-opacity="0.85"/>
@@ -149,12 +200,22 @@ onUnmounted(() => {
                                         <rect x="95" y="15" width="70" height="18" rx="9" fill="#050505"/>
                                         <circle cx="150" cy="24" r="3" fill="#111315" stroke="#ffffff" stroke-opacity="0.12"/>
 
-                                        <text x="130" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="300" letter-spacing="-1" fill="#ffffff">10:41</text>
-                                        <text x="130" y="209" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#ffffff" fill-opacity="0.82">Segunda, 12 de Janeiro</text>
+                                        <text x="130" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="300" letter-spacing="-1" fill="#ffffff">{{ horaFormatada }}</text>
+                                        <text x="130" y="209" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#ffffff" fill-opacity="0.82">{{ dataFormatada }}</text>
 
                                         <rect x="95" y="226" width="70" height="30" rx="15" fill="url(#widgetGrad)" stroke="#ffffff" stroke-opacity="0.10"/>
-                                        <circle cx="109" cy="241" r="6" fill="#fbbf24" fill-opacity="0.9"/>
-                                        <text x="122" y="246" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff" fill-opacity="0.9">24°</text>
+                                        <circle v-if="condicao === 'sol'" cx="109" cy="241" r="6" fill="#fbbf24" fill-opacity="0.9"/>
+                                        <g v-else-if="condicao === 'chuva'">
+                                            <ellipse cx="106" cy="238" rx="7" ry="5" fill="#a1a1aa" fill-opacity="0.9"/>
+                                            <ellipse cx="112" cy="236" rx="5" ry="4" fill="#a1a1aa" fill-opacity="0.9"/>
+                                            <line x1="105" y1="246" x2="103" y2="250" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+                                            <line x1="111" y1="246" x2="109" y2="250" stroke="#60a5fa" stroke-width="1.5" stroke-linecap="round"/>
+                                        </g>
+                                        <g v-else>
+                                            <ellipse cx="106" cy="241" rx="7" ry="5" fill="#d4d4d8" fill-opacity="0.85"/>
+                                            <ellipse cx="112" cy="238" rx="5" ry="4" fill="#d4d4d8" fill-opacity="0.85"/>
+                                        </g>
+                                        <text x="122" y="246" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff" fill-opacity="0.9">{{ temperatura !== null ? temperatura + "°" : "--°" }}</text>
 
                                         <circle cx="50" cy="478" r="24" fill="url(#widgetGrad)" stroke="#ffffff" stroke-opacity="0.12"/>
                                         <path d="M53 467 L44 480 L49 480 L46 491 L57 476 L51 476 Z" fill="#ffffff" fill-opacity="0.9"/>
