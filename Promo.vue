@@ -1,5 +1,6 @@
 <script setup>
 import { useWhatsApp } from "./useWhatsApp.js";
+import logoEverOnCell from "./assets/logo-ever-on-cell.png";
 
 const { abrirWhatsApp } = useWhatsApp();
 </script>
@@ -17,7 +18,7 @@ const { abrirWhatsApp } = useWhatsApp();
             </div>
 
             <div class="promo-phone">
-                📱
+                <img :src="logoEverOnCell" alt="Ever On Cell">
             </div>
         </div>
     </section>
