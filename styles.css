@@ -220,7 +220,7 @@ body.light-theme {
 }
 
 .theme-toggle:hover {
-    background: rgba(124, 58, 237, 0.2);
+    background: rgba(113, 113, 122, 0.2);
     border-color: var(--purple);
 }
 
@@ -282,12 +282,12 @@ body.light-theme {
     background:
     radial-gradient(
         circle at 85% 40%,
-        rgba(124,58,237,.25),
+        rgba(113,113,122,.22),
         transparent 45%
     ),
     radial-gradient(
         circle at 15% 20%,
-        rgba(249,115,22,.15),
+        rgba(48,48,52,.55),
         transparent 35%
     );
     color: var(--text-title);
@@ -311,8 +311,8 @@ body.light-theme {
     display:inline-flex;
     padding:8px 13px;
     border-radius:30px;
-    background:rgba(124,58,237,.25);
-    border:1px solid rgba(167,139,250,.4);
+    background:rgba(113,113,122,.25);
+    border:1px solid rgba(212,212,216,.4);
     color:var(--purple-light);
     font-size:12px;
     font-weight:bold;
@@ -359,7 +359,7 @@ body.light-theme {
 }
 
 .primary-button:hover{
-    background:#6d28d9;
+    background:#5a5a63;
     transform:translateY(-2px);
 }
 
@@ -374,7 +374,7 @@ body.light-theme {
 }
 
 .secondary-button:hover{
-    background:rgba(124,58,237,0.15);
+    background:rgba(113,113,122,0.15);
 }
 
 .hero-info{
@@ -696,7 +696,7 @@ body.light-theme {
 .product:hover{
     transform:translateY(-8px);
     border-color:var(--purple-light);
-    box-shadow:0 20px 40px rgba(0,0,0,.15), 0 0 20px rgba(124, 58, 237, 0.15);
+    box-shadow:0 20px 40px rgba(0,0,0,.15), 0 0 20px rgba(113, 113, 122, 0.15);
 }
 
 .product-image{
@@ -834,7 +834,7 @@ body.light-theme {
     width:45px;
     height:45px;
     border-radius:10px;
-    background:rgba(124,58,237,0.2);
+    background:rgba(113,113,122,0.2);
     color:var(--purple);
     display:flex;
     align-items:center;
@@ -874,13 +874,13 @@ body.light-theme {
     background:
     radial-gradient(
         circle at 80% 30%,
-        rgba(167,139,250,.25),
+        rgba(212,212,216,.20),
         transparent 40%
     ),
     linear-gradient(
         110deg,
-        #0d0d1e,
-        #211138
+        #0d0d0f,
+        #201f23
     );
     color:white;
     display:flex;
@@ -970,8 +970,8 @@ body.light-theme {
     background:
     linear-gradient(
         135deg,
-        #5b21b6,
-        #3b0764
+        #3f3f46,
+        #18181b
     );
     color:white;
     text-align:center;
@@ -984,7 +984,7 @@ body.light-theme {
 }
 
 .final-cta p{
-    color:#ddd6fe;
+    color:#d4d4d8;
     margin-bottom:30px;
 }
 
