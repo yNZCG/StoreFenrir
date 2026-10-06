@@ -105,9 +105,9 @@ onUnmounted(() => {
                                             <stop offset="100%" stop-color="#040405"/>
                                         </linearGradient>
                                         <linearGradient id="screenGrad" x1="20%" y1="0%" x2="80%" y2="100%">
-                                            <stop offset="0%" stop-color="#4c3a78"/>
-                                            <stop offset="45%" stop-color="#1c1626"/>
-                                            <stop offset="100%" stop-color="#07060a"/>
+                                            <stop offset="0%" stop-color="#5c2430"/>
+                                            <stop offset="45%" stop-color="#2a1016"/>
+                                            <stop offset="100%" stop-color="#0a0506"/>
                                         </linearGradient>
                                         <linearGradient id="widgetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" stop-color="#ffffff" stop-opacity="0.14"/>
