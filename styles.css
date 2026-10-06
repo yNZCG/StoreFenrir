@@ -121,9 +121,11 @@ body.light-theme {
 }
 
 .logo-badge{
-    width:30px;
-    height:38px;
+    width:34px;
+    height:34px;
     flex-shrink:0;
+    object-fit:contain;
+    border-radius:8px;
 }
 
 .nav{
@@ -912,8 +914,16 @@ body.light-theme {
 }
 
 .promo-phone{
-    font-size:180px;
-    transform:rotate(-12deg);
+    width:220px;
+    transform:rotate(-6deg);
+    filter:drop-shadow(0 25px 45px rgba(0,0,0,.45));
+}
+
+.promo-phone img{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius:20px;
 }
 
 
