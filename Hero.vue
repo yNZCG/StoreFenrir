@@ -149,36 +149,21 @@ onUnmounted(() => {
                                         <rect x="95" y="15" width="70" height="18" rx="9" fill="#050505"/>
                                         <circle cx="150" cy="24" r="3" fill="#111315" stroke="#ffffff" stroke-opacity="0.12"/>
 
-                                        <rect x="26" y="54" width="208" height="96" rx="22" fill="url(#widgetGrad)" stroke="#ffffff" stroke-opacity="0.08"/>
-                                        <text x="44" y="112" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="800" fill="#ffffff">10:41</text>
-                                        <text x="44" y="132" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#ffffff" fill-opacity="0.62">Seg, 12 Jan</text>
-                                        <circle cx="210" cy="88" r="15" fill="#ffffff" fill-opacity="0.10"/>
-                                        <circle cx="215" cy="83" r="7" fill="#ffffff" fill-opacity="0.22"/>
+                                        <text x="130" y="185" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="300" letter-spacing="-1" fill="#ffffff">10:41</text>
+                                        <text x="130" y="209" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="600" fill="#ffffff" fill-opacity="0.82">Segunda, 12 de Janeiro</text>
 
-                                        <g>
-                                            <rect x="26" y="174" width="40" height="40" rx="12" fill="#71717a"/>
-                                            <rect x="82" y="174" width="40" height="40" rx="12" fill="#52525b"/>
-                                            <rect x="138" y="174" width="40" height="40" rx="12" fill="#8b8b94"/>
-                                            <rect x="194" y="174" width="40" height="40" rx="12" fill="#3f3f46"/>
-                                            <rect x="26" y="232" width="40" height="40" rx="12" fill="#a78bfa" fill-opacity="0.35"/>
-                                            <rect x="82" y="232" width="40" height="40" rx="12" fill="#d4d4d8"/>
-                                            <rect x="138" y="232" width="40" height="40" rx="12" fill="#a1a1aa"/>
-                                            <rect x="194" y="232" width="40" height="40" rx="12" fill="#ffffff" fill-opacity="0.12"/>
-                                            <circle cx="46" cy="194" r="5" fill="#ffffff" fill-opacity="0.55"/>
-                                            <circle cx="102" cy="194" r="5" fill="#ffffff" fill-opacity="0.55"/>
-                                            <circle cx="158" cy="194" r="5" fill="#ffffff" fill-opacity="0.4"/>
-                                            <circle cx="214" cy="194" r="5" fill="#ffffff" fill-opacity="0.55"/>
-                                            <circle cx="46" cy="252" r="5" fill="#ffffff" fill-opacity="0.55"/>
-                                            <circle cx="102" cy="252" r="5" fill="#ffffff" fill-opacity="0.4"/>
-                                            <circle cx="158" cy="252" r="5" fill="#ffffff" fill-opacity="0.55"/>
-                                            <circle cx="214" cy="252" r="5" fill="#ffffff" fill-opacity="0.35"/>
-                                        </g>
+                                        <rect x="95" y="226" width="70" height="30" rx="15" fill="url(#widgetGrad)" stroke="#ffffff" stroke-opacity="0.10"/>
+                                        <circle cx="109" cy="241" r="6" fill="#fbbf24" fill-opacity="0.9"/>
+                                        <text x="122" y="246" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#ffffff" fill-opacity="0.9">24°</text>
 
-                                        <rect x="26" y="470" width="208" height="54" rx="20" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.12"/>
-                                        <rect x="36" y="479" width="36" height="36" rx="11" fill="#71717a"/>
-                                        <rect x="90" y="479" width="36" height="36" rx="11" fill="#d4d4d8"/>
-                                        <rect x="144" y="479" width="36" height="36" rx="11" fill="#52525b"/>
-                                        <rect x="198" y="479" width="36" height="36" rx="11" fill="#a78bfa" fill-opacity="0.4"/>
+                                        <circle cx="50" cy="478" r="24" fill="url(#widgetGrad)" stroke="#ffffff" stroke-opacity="0.12"/>
+                                        <path d="M53 467 L44 480 L49 480 L46 491 L57 476 L51 476 Z" fill="#ffffff" fill-opacity="0.9"/>
+
+                                        <circle cx="210" cy="478" r="24" fill="url(#widgetGrad)" stroke="#ffffff" stroke-opacity="0.12"/>
+                                        <rect x="199" y="471" width="22" height="15" rx="4" fill="#ffffff" fill-opacity="0.9"/>
+                                        <rect x="206" y="466" width="8" height="6" rx="2" fill="#ffffff" fill-opacity="0.9"/>
+                                        <circle cx="210" cy="479" r="5" fill="#2a1016"/>
+                                        <circle cx="208" cy="477" r="1.3" fill="#ffffff" fill-opacity="0.7"/>
 
                                         <rect x="85" y="519" width="90" height="4" rx="2" fill="#ffffff" fill-opacity="0.5"/>
 
